@@ -1,1 +1,4 @@
 nbproject/
+*.suo
+*.json
+*.sqlite
