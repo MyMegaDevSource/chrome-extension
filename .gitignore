@@ -1,4 +1,4 @@
 nbproject/
+/.vs/
 *.suo
-*.json
 *.sqlite
