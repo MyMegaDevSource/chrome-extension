@@ -31,6 +31,12 @@ chrome.webRequest.onBeforeRequest.addListener(
                 else if (details.url.indexOf('https://mega.nz/chat/') > -1) {
                     hash = '#' + details.url.split(".nz/")[1];
                 }
+                else if (details.url.indexOf('/folder/') > -1) {
+                    hash = '#/' + details.url.split(".nz/")[1];
+                }
+                else if (details.url.indexOf('/file/') > -1) {
+                    hash = '#/' + details.url.split(".nz/")[1];
+                }
             }
             else if (details.url.indexOf('https://mega.nz/') > -1 && details.url.length > 16) hash = '#' + details.url.split('https://mega.nz/')[1];
             else if (details.url.indexOf('http://mega.nz/') > -1 && details.url.length > 15) hash = '#' + details.url.split('http://mega.nz/')[1];
